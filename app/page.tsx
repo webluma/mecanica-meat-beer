@@ -1,65 +1,162 @@
 import Image from "next/image";
+import { BeerCard } from "./components/BeerCard";
+import { Button } from "./components/Button";
+import { beers } from "./data/beers";
+import { links } from "./data/links";
+
+const previewBeers = beers.filter((beer) =>
+  ["Sour Frutas Vermelhas", "Pilsen", "Mosaic IPA"].includes(beer.name),
+);
+
+const taproomStats = [
+  {
+    value: `${beers.length}`,
+    label: "cervejas no quadro",
+  },
+  {
+    value: "IBU 5-92",
+    label: "do leve ao intenso",
+  },
+  {
+    value: "ABV 4,3%-8,4%",
+    label: "estilos para cada rodada",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <section className="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">Cervejaria • Taproom • Hambúrgueres</p>
+          <h1>
+            Cerveja artesanal,
+            <span> hambúrgueres e boas histórias.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p>
+            Cervejas artesanais, hambúrgueres feitos na casa e um taproom para
+            encontros que ficam na memória.
+          </p>
+          <div className="hero-actions">
+            <Button href="/cervejas" variant="solid">
+              Ver cervejas em tap
+            </Button>
+            <Button href="/cardapio" variant="text">
+              Conhecer cardápio
+            </Button>
+          </div>
+        </div>
+        <Image
+          className="hero-image"
+          src="/images/hero-mecanica.png"
+          alt="Fachada da Mecânica Meat’n Beer à noite"
+          fill
+          priority
+          sizes="100vw"
+        />
+      </section>
+
+      <section className="social-proof" aria-label="Prova social">
+        <a href={links.instagram} rel="noreferrer" target="_blank">
+          <span>Instagram</span>
+          <strong>@MECANICAMEATNBEER</strong>
+          <small>Bastidores, novidades e chope no balcão.</small>
+        </a>
+        <a href={links.facebook} rel="noreferrer" target="_blank">
+          <span>Facebook</span>
+          <strong>MECÂNICA MEAT’N BEER</strong>
+          <small>Comunidade, fotos e novidades da casa.</small>
+        </a>
+        <a href={links.maps} rel="noreferrer" target="_blank">
+          <span>Google</span>
+          <strong>GOOGLE REVIEWS</strong>
+          <small>Avaliações reais de quem já visitou.</small>
+        </a>
+      </section>
+
+      <section className="split-section">
+        <div id="taproom" className="editorial-block">
+          <p className="section-label">Nossas torneiras</p>
+          <h2>Cervejas no quadro, chope no balcão.</h2>
+          <p>
+            A seleção muda conforme a casa gira as torneiras. Consulte os
+            estilos disponíveis no dia.
+          </p>
+          <div className="preview-grid">
+            {previewBeers.map((beer) => (
+              <BeerCard key={beer.name} beer={beer} />
+            ))}
+          </div>
+          <Button href="/cervejas" variant="text">
+            Ver cervejas em tap
+          </Button>
+
+          <div className="taproom-summary" aria-label="Resumo das torneiras">
+            {taproomStats.map((item) => (
+              <div key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div id="cardapio-preview" className="food-block">
+          <Image
+            src="/images/hero_cardapio.png"
+            alt="Hambúrguer artesanal da Mecânica Meat’n Beer"
+            width={620}
+            height={470}
+          />
+          <div>
+            <p className="section-label">Da cozinha</p>
+            <h2>Hambúrguer artesanal de verdade.</h2>
+            <p>
+              Pão, carne, queijo e fogo no ponto certo. Hambúrgueres preparados
+              para acompanhar uma boa cerveja.
+            </p>
+            <Button href="/cardapio" variant="text">
+              Conhecer cardápio
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="visit-section">
+        <div className="visit-copy">
+          <h2>Vem pra Mecânica.</h2>
+          <p>
+            Cerveja artesanal, hambúrgueres autorais e um taproom direto ao
+            ponto no coração de Pato Branco.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="visit-details">
+          <address>
+            R. Assis Brasil, 126
+            <br />
+            Brasília — Pato Branco, PR
+            <br />
+            85504-011
+          </address>
+          <div>
+            <strong>Horários</strong>
+            <p>
+              Terça a sábado
+              <br />
+              17:30 às 00:00
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+
+        <iframe
+          className="visit-map"
+          title="Mapa da Mecânica Meat’n Beer"
+          loading="eager"
+          referrerPolicy="no-referrer-when-downgrade"
+          src={links.mapsEmbed}
+        />
+      </section>
+    </>
   );
 }
