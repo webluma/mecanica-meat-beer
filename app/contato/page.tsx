@@ -3,9 +3,9 @@ import { Button } from "../components/Button";
 import { links } from "../data/links";
 
 export const metadata: Metadata = {
-  title: "Contato | Mecânica Meat’n Beer",
+  title: "Contato | BRASSA BREWING",
   description:
-    "Endereço, horário, WhatsApp e redes sociais da Mecânica Meat’n Beer em Pato Branco.",
+    "Endereço, horário, WhatsApp e redes sociais da BRASSA BREWING em Curitiba.",
 };
 
 export default function ContactPage() {
@@ -14,9 +14,9 @@ export default function ContactPage() {
       <section className="cardapio-hero textual-page-hero contato-hero">
         <div>
           <p className="eyebrow">Contato</p>
-          <h1>Vem pra Mecânica.</h1>
+          <h1>Vem pra BRASSA.</h1>
           <p>
-            Estamos na R. Assis Brasil, 126, em Pato Branco. Confira o caminho,
+            Estamos na Rua do Lúpulo Teimoso, 404, em Curitiba. Confira o caminho,
             fale com a casa pelo WhatsApp e acompanhe as novidades nas redes.
           </p>
           <div className="hero-actions">
@@ -33,7 +33,7 @@ export default function ContactPage() {
       <section className="contact-page-grid">
         <div className="contact-map-panel">
           <iframe
-            title="Mapa da Mecânica Meat’n Beer"
+            title="Mapa de Curitiba"
             loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
             src={links.mapsEmbed}
@@ -44,13 +44,13 @@ export default function ContactPage() {
           <section className="contact-grid">
             <article>
               <span className="contact-kicker">Endereço</span>
-              <h2>Taproom em Pato Branco</h2>
+              <h2>Taproom em Curitiba</h2>
               <p>
-                R. Assis Brasil, 126
+                Rua do Lúpulo Teimoso, 404
                 <br />
-                Brasília — Pato Branco, PR
+                Batel — Curitiba, PR
                 <br />
-                85504-011
+                80000-000
               </p>
             </article>
             <article>
@@ -65,7 +65,7 @@ export default function ContactPage() {
             <article>
               <span className="contact-kicker">WhatsApp</span>
               <h2>Atendimento direto</h2>
-              <p>+55 46 99119-9697</p>
+              <p>+55 (41) 00000-0000</p>
               <a href={links.whatsapp} rel="noreferrer" target="_blank">
                 Chamar no WhatsApp
               </a>

@@ -18,9 +18,9 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   title:
-    "Mecânica Meat’n Beer | Cerveja Artesanal, Hambúrgueres e Taproom em Pato Branco",
+    "BRASSA BREWING | Cerveja Artesanal, Hambúrgueres e Taproom em Curitiba",
   description:
-    "Cervejas artesanais, hambúrgueres feitos na casa e taproom em Pato Branco. Reserve sua mesa na Mecânica Meat’n Beer pelo WhatsApp.",
+    "Cervejas artesanais, hambúrgueres feitos na casa e taproom em Curitiba. Reserve sua mesa na BRASSA BREWING pelo WhatsApp.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${display.variable} ${sans.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${display.variable} ${sans.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <Header />
         <main>{children}</main>

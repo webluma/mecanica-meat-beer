@@ -6,9 +6,9 @@ import { beers } from "../data/beers";
 import { links } from "../data/links";
 
 export const metadata: Metadata = {
-  title: "Cervejas em Tap | Mecânica Meat’n Beer",
+  title: "Cervejas em Tap | BRASSA BREWING",
   description:
-    "Confira as cervejas em tap da Mecânica Meat’n Beer em Pato Branco. Veja estilos, IBU, ABV e consulte a disponibilidade pelo WhatsApp.",
+    "Confira as cervejas em tap da BRASSA BREWING em Curitiba. Veja estilos, IBU, ABV e consulte a disponibilidade pelo WhatsApp.",
 };
 
 export default function BeersPage() {

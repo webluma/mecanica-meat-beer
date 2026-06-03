@@ -16,7 +16,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo provolone grelhado com geleia de pimenta.",
     image: "/images/menu/provolera-real.png",
     imagePosition: "50% 50%",
-    alt: "Provolera da Mecânica Meat’n Beer",
+    alt: "Provolera da BRASSA BREWING",
   },
   {
     name: "Linguicinha",
@@ -32,7 +32,7 @@ export const menuItems: MenuItem[] = [
     description: "Alface, rúcula, tomate, molho à escolha e queijo à escolha.",
     image: "/images/menu/vegetariano-real.png",
     imagePosition: "50% 50%",
-    alt: "Hambúrguer vegetariano da Mecânica Meat’n Beer",
+    alt: "Hambúrguer vegetariano da BRASSA BREWING",
   },
   {
     name: "S.U.Í.N.O",
@@ -40,7 +40,7 @@ export const menuItems: MenuItem[] = [
     description: "Pão, carne suína, chutney de abacaxi e queijo provolone.",
     image: "/images/menu/suino-real.png",
     imagePosition: "50% 50%",
-    alt: "Hambúrguer suíno da Mecânica Meat’n Beer",
+    alt: "Hambúrguer suíno da BRASSA BREWING",
   },
   {
     name: "Bovino",
@@ -48,7 +48,7 @@ export const menuItems: MenuItem[] = [
     description: "Alface, tomate, maionese de alho e queijo prato.",
     image: "/images/menu/bovino-real.png",
     imagePosition: "50% 50%",
-    alt: "Hambúrguer bovino da Mecânica Meat’n Beer",
+    alt: "Hambúrguer bovino da BRASSA BREWING",
   },
   {
     name: "Cordeiro",
@@ -56,7 +56,7 @@ export const menuItems: MenuItem[] = [
     description: "Rúcula, maionese de hortelã e queijo colonial.",
     image: "/images/menu/cordeiro-real.png",
     imagePosition: "50% 50%",
-    alt: "Hambúrguer de cordeiro da Mecânica Meat’n Beer",
+    alt: "Hambúrguer de cordeiro da BRASSA BREWING",
   },
 
 ];

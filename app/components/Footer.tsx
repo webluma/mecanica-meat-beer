@@ -4,8 +4,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-brand">
-        <strong>Mecânica Meat’n Beer</strong>
-        <p>R. Assis Brasil, 126 — Brasília, Pato Branco, PR</p>
+        <strong>BRASSA BREWING</strong>
+        <p>Rua do Lúpulo Teimoso, 404 — Batel, Curitiba, PR</p>
         <p>Terça a sábado, das 17:30 às 00:00</p>
       </div>
 
@@ -22,7 +22,7 @@ export function Footer() {
       <div className="footer-legal">
         <small>Beba com responsabilidade.</small>
         <p>
-          © 2026 Mecânica Meat’n Beer. Todos os direitos reservados. Criado e
+          © 2026 BRASSA BREWING. Todos os direitos reservados. Criado e
           desenvolvido por{" "}
           <a href="https://webluma.tech/" rel="noreferrer" target="_blank">
             WebLuma

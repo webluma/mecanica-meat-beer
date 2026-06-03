@@ -15,9 +15,9 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <Link className="logo" href="/" aria-label="Página inicial da Mecânica Meat’n Beer">
-        <strong>Mecânica</strong>
-        <span>meat’n beer</span>
+      <Link className="logo" href="/" aria-label="Página inicial da BRASSA BREWING">
+        <strong>BRASSA</strong>
+        <span>BREWING</span>
       </Link>
       <nav className="main-nav" aria-label="Menu principal">
         {nav.map(([label, href]) => {

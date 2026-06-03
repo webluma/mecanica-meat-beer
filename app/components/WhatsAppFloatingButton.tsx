@@ -7,7 +7,7 @@ export function WhatsAppFloatingButton() {
       href={links.whatsapp}
       rel="noreferrer"
       target="_blank"
-      aria-label="Chamar a Mecânica Meat’n Beer no WhatsApp"
+      aria-label="Chamar a BRASSA BREWING no WhatsApp"
     >
       WA
     </a>

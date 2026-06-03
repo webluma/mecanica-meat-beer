@@ -5,9 +5,9 @@ import { menuItems, type MenuItem } from "../data/menu";
 import { links } from "../data/links";
 
 export const metadata: Metadata = {
-  title: "Cardápio | Mecânica Meat’n Beer",
+  title: "Cardápio | BRASSA BREWING",
   description:
-    "Hambúrgueres artesanais, entradas e brasa da Mecânica Meat’n Beer em Pato Branco. Consulte o cardápio pelo WhatsApp.",
+    "Hambúrgueres artesanais, entradas e brasa da BRASSA BREWING em Curitiba. Consulte o cardápio pelo WhatsApp.",
 };
 
 function MenuSectionTitle({ children }: { children: React.ReactNode }) {

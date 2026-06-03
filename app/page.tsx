@@ -48,8 +48,8 @@ export default function Home() {
         </div>
         <Image
           className="hero-image"
-          src="/images/hero-mecanica.png"
-          alt="Fachada da Mecânica Meat’n Beer à noite"
+          src="/images/hero-brassa-brewing.png"
+          alt="Fachada da BRASSA BREWING à noite"
           fill
           priority
           sizes="100vw"
@@ -59,12 +59,12 @@ export default function Home() {
       <section className="social-proof" aria-label="Prova social">
         <a href={links.instagram} rel="noreferrer" target="_blank">
           <span>Instagram</span>
-          <strong>@MECANICAMEATNBEER</strong>
+          <strong>INSTAGRAM</strong>
           <small>Bastidores, novidades e chope no balcão.</small>
         </a>
         <a href={links.facebook} rel="noreferrer" target="_blank">
           <span>Facebook</span>
-          <strong>MECÂNICA MEAT’N BEER</strong>
+          <strong>FACEBOOK</strong>
           <small>Comunidade, fotos e novidades da casa.</small>
         </a>
         <a href={links.maps} rel="noreferrer" target="_blank">
@@ -104,7 +104,7 @@ export default function Home() {
         <div id="cardapio-preview" className="food-block">
           <Image
             src="/images/hero_cardapio.png"
-            alt="Hambúrguer artesanal da Mecânica Meat’n Beer"
+            alt="Hambúrguer artesanal da BRASSA BREWING"
             width={620}
             height={470}
           />
@@ -124,20 +124,20 @@ export default function Home() {
 
       <section className="visit-section">
         <div className="visit-copy">
-          <h2>Vem pra Mecânica.</h2>
+          <h2>Vem pra BRASSA.</h2>
           <p>
             Cerveja artesanal, hambúrgueres autorais e um taproom direto ao
-            ponto no coração de Pato Branco.
+            ponto no coração de Curitiba.
           </p>
         </div>
 
         <div className="visit-details">
           <address>
-            R. Assis Brasil, 126
+            Rua do Lúpulo Teimoso, 404
             <br />
-            Brasília — Pato Branco, PR
+            Batel — Curitiba, PR
             <br />
-            85504-011
+            80000-000
           </address>
           <div>
             <strong>Horários</strong>
@@ -151,7 +151,7 @@ export default function Home() {
 
         <iframe
           className="visit-map"
-          title="Mapa da Mecânica Meat’n Beer"
+          title="Mapa de Curitiba"
           loading="eager"
           referrerPolicy="no-referrer-when-downgrade"
           src={links.mapsEmbed}
